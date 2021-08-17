@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/drink"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_local_drink_24"
+        android:title="Drink"/>
+    <item
+        android:id="@+id/beer"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_hourglass_bottom_24"
+        android:title="Beers"/>
+</menu>
