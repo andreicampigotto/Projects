@@ -2,7 +2,7 @@ package com.proway.a002_git_project.model
 
 import com.google.gson.annotations.SerializedName
 
-data class Pulls(
+data class Repository(
     @SerializedName("id")
     val id: Long,
     @SerializedName("name")
