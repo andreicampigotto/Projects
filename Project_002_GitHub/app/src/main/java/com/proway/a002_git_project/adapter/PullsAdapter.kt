@@ -35,6 +35,7 @@ class PullViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
     private val binding: ItemPullBinding = ItemPullBinding.bind(itemView)
 
     fun bind(pull:Pull){
-
+        binding.tvPullTitle.text = pull.title
+        binding.tvPullDescription.text = pull.body
     }
 }

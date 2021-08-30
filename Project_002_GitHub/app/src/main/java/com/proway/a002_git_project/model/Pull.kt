@@ -8,6 +8,8 @@ data class Pull(
     @SerializedName("body")
     val body: String,
     @SerializedName("created_at")
-    val created_at: String
+    val created_at: String,
+    @SerializedName("created_at")
+    val owner: Owner
 ) {
 }
