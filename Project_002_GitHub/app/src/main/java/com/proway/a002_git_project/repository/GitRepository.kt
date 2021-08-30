@@ -13,18 +13,21 @@ class GitRepository {
     fun getRepositoriesList(onComplete: (List<Repository>?, String?) -> Unit) {
         val call = serviceRepository.getRepositories()
 
-        call.enqueue(object : Callback<List<RepositoryResponse>> {
-            override fun onResponse(call: Call<List<RepositoryResponse>>, response: Response<List<RepositoryResponse>>
+        call.enqueue(object : Callback<RepositoryResponse>{
+            override fun onResponse(
+                call: Call<RepositoryResponse>,
+                response: Response<RepositoryResponse>
             ) {
                 if (response.body() != null) {
-//                    onComplete(response.body(), null)
+                    onComplete(response.body()!!.items, null)
                 } else {
                     onComplete(null, "Ocorreu um erro")
                 }
             }
-            override fun onFailure(call: Call<List<RepositoryResponse>>, t: Throwable) {
+
+            override fun onFailure(call: Call<RepositoryResponse>, t: Throwable) {
+                onComplete(null, t.localizedMessage)
             }
         })
     }
-
 }
