@@ -54,7 +54,8 @@
                 android:layout_height="70dp"
                 android:layout_marginTop="2dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/ic_baseline_disabled_by_default_24"/>
 
             <TextView
                 android:id="@+id/textViewUsernameRepository"
@@ -89,7 +90,7 @@
                 android:fontFamily="sans-serif-black"
                 android:hint="Fork"
                 android:textColor="@color/yellow"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:layout_constraintStart_toStartOf="@+id/tvRepositoryDescription"
                 app:layout_constraintTop_toTopOf="@+id/textViewStarsRepository"
                 tools:ignore="MissingConstraints" />
@@ -105,7 +106,7 @@
                 android:fontFamily="sans-serif-black"
                 android:hint="Stars"
                 android:textColor="@color/yellow"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/textViewForkRepository"
                 app:layout_constraintTop_toBottomOf="@+id/tvRepositoryDescription" />
 
@@ -120,7 +121,7 @@
                 android:fontFamily="sans-serif-black"
                 android:hint="watchers"
                 android:textColor="@color/yellow"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:layout_constraintStart_toEndOf="@+id/textViewStarsRepository"
                 app:layout_constraintTop_toBottomOf="@+id/tvRepositoryDescription" />
 
