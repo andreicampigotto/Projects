@@ -10,8 +10,8 @@ import retrofit2.Response
 class GitRepository {
     private val serviceRepository = RefrofitService.getRepositories()
 
-    fun getRepositoriesList(onComplete: (List<Repository>?, String?) -> Unit) {
-        val call = serviceRepository.getRepositories()
+    fun getRepositoriesList(language: String, sort: String, page:Int, onComplete: (List<Repository>?, String?) -> Unit) {
+        val call = serviceRepository.getRepositories(language, sort, page)
 
         call.enqueue(object : Callback<RepositoryResponse>{
             override fun onResponse(

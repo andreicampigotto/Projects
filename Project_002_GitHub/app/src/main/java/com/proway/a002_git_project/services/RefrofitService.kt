@@ -10,9 +10,7 @@ object RefrofitService {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 
-    fun getRepositories() : RepositoryService {
-        return retrofit.create(RepositoryService::class.java)
-    }
+    fun getRepositories() : RepositoryService = retrofit.create(RepositoryService::class.java)
 
 }
 
