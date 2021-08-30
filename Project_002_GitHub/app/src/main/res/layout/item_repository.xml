@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="17dp">
@@ -21,10 +22,10 @@
             android:padding="7dp">
 
             <TextView
-                android:id="@+id/tvTitle"
+                android:id="@+id/tvRepositoryTitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="Title"
+                android:hint="Repository name"
                 android:maxLines="1"
                 android:textColor="@color/black"
                 android:textSize="22sp"
@@ -33,9 +34,9 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tvDescription"
+                android:id="@+id/tvRepositoryDescription"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="0dp"
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="17dp"
                 android:hint="Aqui vai ter uma descricao bem legal e o teste nao sera Lorem Ipsum"
@@ -45,7 +46,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/imageView"
                 app:layout_constraintEnd_toStartOf="@+id/imageView"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+                app:layout_constraintTop_toBottomOf="@+id/tvRepositoryTitle" />
 
             <ImageView
                 android:id="@+id/imageView"
@@ -56,7 +57,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/textViewUsernameRepository"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="7dp"
@@ -66,18 +67,63 @@
                 android:textColor="@color/black"
                 android:textSize="15sp"
                 app:layout_constraintEnd_toEndOf="@+id/imageView"
-                app:layout_constraintStart_toEndOf="@+id/tvDescription"
+                app:layout_constraintStart_toEndOf="@+id/tvRepositoryDescription"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
             <TextView
+                android:id="@+id/textViewNameLastnameRepository"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="Nome Sobrenome"
                 android:maxLines="1"
                 android:textSize="10sp"
-                app:layout_constraintEnd_toEndOf="@+id/textView"
-                app:layout_constraintStart_toStartOf="@+id/textView"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
+                app:layout_constraintEnd_toEndOf="@+id/textViewUsernameRepository"
+                app:layout_constraintStart_toStartOf="@+id/textViewUsernameRepository"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUsernameRepository" />
+
+            <TextView
+                android:id="@+id/textViewForkRepository"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-black"
+                android:hint="Fork"
+                android:textColor="@color/yellow"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/tvRepositoryDescription"
+                app:layout_constraintTop_toTopOf="@+id/textViewStarsRepository"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textViewStarsRepository"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_baseline_star_24"
+                android:fontFamily="sans-serif-black"
+                android:hint="Stars"
+                android:textColor="@color/yellow"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/textViewForkRepository"
+                app:layout_constraintTop_toBottomOf="@+id/tvRepositoryDescription" />
+
+            <TextView
+                android:id="@+id/textViewViewsRepositoryWatchers"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_baseline_remove_red_eye_24"
+                android:fontFamily="sans-serif-black"
+                android:hint="watchers"
+                android:textColor="@color/yellow"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/textViewStarsRepository"
+                app:layout_constraintTop_toBottomOf="@+id/tvRepositoryDescription" />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>

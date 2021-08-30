@@ -2,7 +2,7 @@ package com.proway.a002_git_project
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.proway.a002_git_project.view.MainFragment
+import com.proway.a002_git_project.view.RepositoryFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.main_activity)
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.container, MainFragment.newInstance())
+                .replace(R.id.container, RepositoryFragment.newInstance())
                 .commitNow()
         }
     }
