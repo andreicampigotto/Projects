@@ -9,6 +9,8 @@ data class Repository(
     val name: String,
     @SerializedName("description")
     val description: String,
+    @SerializedName("language")
+    val language: String,
     @SerializedName("full_name")
     val full_name: String,
     @SerializedName("owner")
