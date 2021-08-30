@@ -11,7 +11,9 @@ class GitRepository {
     private val serviceRepository = RefrofitService.getRepositories()
 
     fun getRepositoriesList(language: String, sort: String, page:Int, onComplete: (List<Repository>?, String?) -> Unit) {
-        val call = serviceRepository.getRepositories(language, sort, page)
+        val call = serviceRepository.getRepositories(language = "language:$language",
+            sort = sort,
+            page = page)
 
         call.enqueue(object : Callback<RepositoryResponse>{
             override fun onResponse(
@@ -21,7 +23,7 @@ class GitRepository {
                 if (response.body() != null) {
                     onComplete(response.body()!!.items, null)
                 } else {
-                    onComplete(null, "Ocorreu um erro")
+                    onComplete(null, "Error")
                 }
             }
 
