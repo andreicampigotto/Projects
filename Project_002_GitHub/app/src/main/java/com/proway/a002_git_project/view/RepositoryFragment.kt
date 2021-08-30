@@ -31,13 +31,11 @@ class RepositoryFragment : Fragment(R.layout.repository_fragment) {
         binding= RepositoryFragmentBinding.bind(view)
         viewModel = ViewModelProvider(this).get(RepositoryViewModel::class.java)
 
-        viewModel.repositories.observe(viewLifecycleOwner, observerRepository)
-
         binding.repositoryRecyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.repositoryRecyclerView.adapter = adapter
 
         viewModel.repositories.observe(viewLifecycleOwner, observerRepository)
 
+        viewModel.getRepositoriesList()
     }
-
 }
