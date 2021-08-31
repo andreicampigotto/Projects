@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.proway.a002_git_project.model.Pull
-import com.proway.a002_git_project.repository.GitPulls
+import com.proway.a002_git_project.repository.GitPullsRepository
 
 class PullViewModel: ViewModel() {
 
@@ -14,7 +14,7 @@ class PullViewModel: ViewModel() {
     val _error = MutableLiveData<String>()
     val error: LiveData<String> = _error
 
-    private val gitPull = GitPulls()
+    private val gitPull = GitPullsRepository()
 
     fun getPullsList() {
 //        gitPull.getPulls(fullName =){ list, error ->
