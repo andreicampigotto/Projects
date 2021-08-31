@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.proway.a002_git_project.R
 import com.proway.a002_git_project.databinding.ItemPullBinding
 import com.proway.a002_git_project.model.Pull
@@ -37,5 +38,11 @@ class PullViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
     fun bind(pull:Pull){
         binding.tvPullTitle.text = pull.title
         binding.tvPullDescription.text = pull.body
+        binding.textViewUsernamePull.text = pull.owner.login
+
+        pull.owner.let {
+            Glide.with(itemView.context).load(it.avatar_url)
+                .into(binding.imageView)
+        }
     }
 }

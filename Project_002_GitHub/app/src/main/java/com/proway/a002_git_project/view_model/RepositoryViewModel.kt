@@ -17,7 +17,7 @@ class RepositoryViewModel : ViewModel() {
     private val gitRepository= GitRepository()
 
     fun getRepositoriesList() {
-        gitRepository.getRepositoriesList(language = "Java", sort = "star", page = 1) { list, error ->
+        gitRepository.getRepositoriesList(language = "Kotlin", sort = "star", page = 1) { list, error ->
             list?.apply {
                 _repositories.value = this
             }
