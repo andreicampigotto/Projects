@@ -8,6 +8,8 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.proway.a002_git_project.R
 import com.proway.a002_git_project.adapter.RepositoriesAdapter
+import com.proway.a002_git_project.databinding.ItemPullBinding
+import com.proway.a002_git_project.databinding.ItemRepositoryBinding
 import com.proway.a002_git_project.databinding.RepositoryFragmentBinding
 import com.proway.a002_git_project.model.Repository
 import com.proway.a002_git_project.view_model.RepositoryViewModel
@@ -20,6 +22,7 @@ class RepositoryFragment : Fragment(R.layout.repository_fragment) {
 
     private lateinit var viewModel: RepositoryViewModel
     private lateinit var binding: RepositoryFragmentBinding
+    //private lateinit var bindingItem: ItemRepositoryBinding
     private val adapter = RepositoriesAdapter()
 
     private val observerRepository = Observer<List<Repository>> { repository ->
@@ -37,6 +40,8 @@ class RepositoryFragment : Fragment(R.layout.repository_fragment) {
         viewModel.repositories.observe(viewLifecycleOwner, observerRepository)
         viewModel.getRepositoriesList()
 
-
+//        bindingItem.cardView.setOnClickListener {
+//            PullFragment.newInstance()
+//        }
     }
 }
