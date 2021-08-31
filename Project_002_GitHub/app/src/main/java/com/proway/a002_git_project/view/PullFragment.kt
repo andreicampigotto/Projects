@@ -36,7 +36,6 @@ class PullFragment: Fragment(R.layout.pulls_fragment) {
         binding.pullRecyclerView.adapter = adapter
 
         viewModel.pulls.observe(viewLifecycleOwner, observerPull)
-
         viewModel.getPullsList()
     }
 }

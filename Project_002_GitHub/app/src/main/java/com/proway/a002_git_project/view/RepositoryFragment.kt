@@ -35,7 +35,6 @@ class RepositoryFragment : Fragment(R.layout.repository_fragment) {
         binding.repositoryRecyclerView.adapter = adapter
 
         viewModel.repositories.observe(viewLifecycleOwner, observerRepository)
-
         viewModel.getRepositoriesList()
     }
 }
