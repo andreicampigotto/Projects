@@ -3,7 +3,7 @@ package com.proway.a002_git_project.services
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object RefrofitService {
+object RetrofitService {
 
     private val retrofit = Retrofit.Builder()
         .baseUrl("https://api.github.com")
@@ -12,5 +12,6 @@ object RefrofitService {
 
     fun getRepositories() : RepositoryService = retrofit.create(RepositoryService::class.java)
 
+    fun getPulls(): PullService = retrofit.create(PullService::class.java)
 }
 

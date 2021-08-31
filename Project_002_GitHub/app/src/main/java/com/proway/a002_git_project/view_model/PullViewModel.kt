@@ -15,7 +15,7 @@ class PullViewModel: ViewModel() {
     val _error = MutableLiveData<String>()
     val error : LiveData<String> = _error
 
-    private val gitRepository= GitRepository()
+    private val gitPull= GitRepository()
 
     fun getPullsList() {
         gitRepository.getRepositoriesList() { list, error ->
