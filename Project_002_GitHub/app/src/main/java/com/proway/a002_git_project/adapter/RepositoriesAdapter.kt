@@ -44,7 +44,7 @@ class RepositoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         binding.textViewStarsRepository.text = repository.stargazers_count.toString()
         binding.textViewViewsRepositoryWatchers.text = repository.watchers_count.toString()
         binding.textViewUsernameRepository.text = repository.owner.login
-        binding.textViewNameLastnameRepository.text = repository.owner.bio
+        binding.textViewNameLastnameRepository.text = repository.owner.html_url
 
         repository.owner.let {
             Glide.with(itemView.context).load(it.avatar_url)

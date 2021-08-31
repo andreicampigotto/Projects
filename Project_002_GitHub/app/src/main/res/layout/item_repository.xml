@@ -67,8 +67,8 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="15sp"
-                app:layout_constraintEnd_toEndOf="@+id/imageView"
-                app:layout_constraintStart_toEndOf="@+id/tvRepositoryDescription"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/imageView"
                 app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
             <TextView
@@ -76,9 +76,10 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="Nome Sobrenome"
+                android:textAlignment="center"
                 android:maxLines="1"
                 android:textSize="10sp"
-                app:layout_constraintEnd_toEndOf="@+id/textViewUsernameRepository"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/textViewUsernameRepository"
                 app:layout_constraintTop_toBottomOf="@+id/textViewUsernameRepository" />
 

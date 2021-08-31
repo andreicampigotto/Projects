@@ -17,14 +17,14 @@ class PullViewModel: ViewModel() {
     private val gitPull = GitPullsRepository()
 
     fun getPullsList() {
-//        gitPull.getPulls(fullName =){ list, error ->
-//            list?.apply {
-//                _pulls.value = this
-//            }
-//
-//            error?.apply {
-//                _error.value = this
-//            }
-//        }
+        gitPull.getPulls(fullName = ""){ list, error ->
+            list?.apply {
+                //_pulls.value = this
+            }
+
+            error?.apply {
+                _error.value = this
+            }
+        }
     }
 }
