@@ -12,7 +12,9 @@ import com.proway.a002_git_project.databinding.ItemPullBinding
 import com.proway.a002_git_project.databinding.PullsFragmentBinding
 import com.proway.a002_git_project.model.Pull
 import com.proway.a002_git_project.view_model.PullViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class PullFragment: Fragment(R.layout.pulls_fragment) {
 
     companion object {

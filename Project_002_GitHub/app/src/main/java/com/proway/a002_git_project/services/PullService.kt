@@ -1,6 +1,6 @@
 package com.proway.a002_git_project.services
 
-import com.proway.a002_git_project.model.PullRequestResponse
+import com.proway.a002_git_project.model.Pull
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -11,6 +11,6 @@ interface PullService {
     fun getPullRequestsList(
         @Path("fullName", encoded = true)
         fullName: String):
-            Call<List<PullRequestResponse>>
+            Call<List<Pull>>
 
 }

@@ -8,12 +8,12 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.proway.a002_git_project.R
 import com.proway.a002_git_project.adapter.RepositoriesAdapter
-import com.proway.a002_git_project.databinding.ItemPullBinding
-import com.proway.a002_git_project.databinding.ItemRepositoryBinding
 import com.proway.a002_git_project.databinding.RepositoryFragmentBinding
 import com.proway.a002_git_project.model.Repository
 import com.proway.a002_git_project.view_model.RepositoryViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class RepositoryFragment : Fragment(R.layout.repository_fragment) {
 
     companion object {
@@ -22,7 +22,11 @@ class RepositoryFragment : Fragment(R.layout.repository_fragment) {
 
     private lateinit var viewModel: RepositoryViewModel
     private lateinit var binding: RepositoryFragmentBinding
-    private val adapter = RepositoriesAdapter()
+    private val adapter = RepositoriesAdapter(){
+        requireActivity().supportFragmentManager.beginTransaction()
+            .replace(R.id.container,PullFragment())
+            .commitNow()
+    }
 
     private val observerRepository = Observer<List<Repository>> { repository ->
         adapter.update(repository)
@@ -39,4 +43,5 @@ class RepositoryFragment : Fragment(R.layout.repository_fragment) {
         viewModel.repositories.observe(viewLifecycleOwner, observerRepository)
         viewModel.getRepositoriesList()
     }
+
 }

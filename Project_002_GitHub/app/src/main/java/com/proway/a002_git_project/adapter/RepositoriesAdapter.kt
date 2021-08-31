@@ -8,8 +8,9 @@ import com.bumptech.glide.Glide
 import com.proway.a002_git_project.R
 import com.proway.a002_git_project.databinding.ItemRepositoryBinding
 import com.proway.a002_git_project.model.Repository
+import com.proway.a002_git_project.view.PullFragment
 
-class RepositoriesAdapter() : RecyclerView.Adapter<RepositoryViewHolder>() {
+class RepositoriesAdapter(val onTap: (Repository) -> Unit) : RecyclerView.Adapter<RepositoryViewHolder>() {
 
     private var repostories = mutableListOf<Repository>()
 
@@ -22,6 +23,9 @@ class RepositoriesAdapter() : RecyclerView.Adapter<RepositoryViewHolder>() {
     override fun onBindViewHolder(holder: RepositoryViewHolder, position: Int) {
         repostories[position].apply {
             holder.bind(this)
+            holder.itemView.setOnClickListener {
+                onTap(this)
+            }
         }
     }
 
@@ -38,6 +42,7 @@ class RepositoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val binding: ItemRepositoryBinding = ItemRepositoryBinding.bind(itemView)
 
     fun bind(repository: Repository) {
+        binding
         binding.tvRepositoryTitle.text = repository.name
         binding.tvRepositoryDescription.text = repository.description
         binding.textViewForkRepository.text = repository.forks_count.toString()
@@ -50,6 +55,8 @@ class RepositoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
             Glide.with(itemView.context).load(it.avatar_url)
                 .into(binding.imageView)
         }
+
+
     }
 
 
