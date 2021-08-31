@@ -9,7 +9,7 @@ import com.proway.a002_git_project.R
 import com.proway.a002_git_project.databinding.ItemRepositoryBinding
 import com.proway.a002_git_project.model.Repository
 
-class RepositoriesAdapter : RecyclerView.Adapter<RepositoryViewHolder>() {
+class RepositoriesAdapter() : RecyclerView.Adapter<RepositoryViewHolder>() {
 
     private var repostories = mutableListOf<Repository>()
 
@@ -51,4 +51,6 @@ class RepositoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
                 .into(binding.imageView)
         }
     }
+
+
 }

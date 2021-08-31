@@ -19,7 +19,7 @@ class PullViewModel: ViewModel() {
     fun getPullsList() {
         gitPull.getPulls(fullName = ""){ list, error ->
             list?.apply {
-                //_pulls.value = this
+               // _pulls.value = this
             }
 
             error?.apply {
