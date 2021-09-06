@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/layout/insert_agenda.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/insert_doctor.xml" value="0.4418238993710692" />
+        <entry key="app/src/main/res/layout/insert_patient.xml" value="0.35979513444302175" />
+        <entry key="app/src/main/res/layout/insert_speciality.xml" value="0.4542312392416568" />
+        <entry key="app/src/main/res/layout/item_speciality.xml" value="0.19010416666666666" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
