@@ -24,8 +24,7 @@ class RepositoryFragment : Fragment(R.layout.repository_fragment) {
     private lateinit var binding: RepositoryFragmentBinding
     private val adapter = RepositoriesAdapter(){
         requireActivity().supportFragmentManager.beginTransaction()
-            .replace(R.id.container,PullFragment())
-            .commitNow()
+            .replace(R.id.container,PullFragment()).commitNow()
     }
 
     private val observerRepository = Observer<List<Repository>> { repository ->

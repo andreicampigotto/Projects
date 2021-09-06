@@ -17,9 +17,9 @@ class PullViewModel: ViewModel() {
     private val gitPull = GitPullsRepository()
 
     fun getPullsList() {
-        gitPull.getPulls(fullName = ""){ list, error ->
+        gitPull.getPulls(fullName = String()){ list, error ->
             list?.apply {
-               // _pulls.value = this
+                _pulls.value = this
             }
 
             error?.apply {

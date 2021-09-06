@@ -23,7 +23,6 @@ class PullFragment: Fragment(R.layout.pulls_fragment) {
 
     private lateinit var viewModel: PullViewModel
     private lateinit var binding: PullsFragmentBinding
-    private lateinit var bindingItem: ItemPullBinding
     private var adapter = PullsAdapter()
 
     private val observerPull = Observer<List<Pull>> { pull ->
@@ -42,6 +41,5 @@ class PullFragment: Fragment(R.layout.pulls_fragment) {
         viewModel.pulls.observe(viewLifecycleOwner, observerPull)
         viewModel.getPullsList()
 
-        bindingItem.cardViewPull.setOnClickListener {  }
     }
 }

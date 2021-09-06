@@ -3,6 +3,8 @@ package com.proway.crudizin_basico.repository
 import com.proway.crudizin_basico.database.dao.AgendaDao
 import com.proway.crudizin_basico.model.Agenda
 import com.proway.crudizin_basico.model.AgendaWhitFks
+import com.proway.crudizin_basico.model.Doctor
+import com.proway.crudizin_basico.model.Patient
 import javax.inject.Inject
 
 class AgendaRepository @Inject constructor(
@@ -13,7 +15,19 @@ class AgendaRepository @Inject constructor(
         return agendaDao.fetch()
     }
 
-//    fun insert(List<agenda>: Agenda) {
+    fun getAgendaByDoctor(doctor: String): List<AgendaWhitFks> {
+        return agendaDao.fetchByDoctor(doctor)
+    }
+
+    fun getByDoctorSpeciality(doctor: String): List<AgendaWhitFks> {
+        return agendaDao.fetchByDoctor(doctor)
+    }
+
+    fun getByPatient(patient: String):List<AgendaWhitFks>{
+        return agendaDao.fetchByPatient(patient)
+    }
+
+//    fun insert(List<Agenda>: Agenda) {
 //        return dao.insert(agenda)
 //    }
 

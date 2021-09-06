@@ -5,6 +5,6 @@ import retrofit2.Call
 import retrofit2.http.GET
 
 interface OwnerService {
-    @GET("/users/")
+    @GET("/users")
     fun getOwner(): Call<Owner>
 }

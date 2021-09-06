@@ -13,5 +13,7 @@ object RetrofitService {
     fun getRepositories() : RepositoryService = retrofit.create(RepositoryService::class.java)
 
     fun getPulls(): PullService = retrofit.create(PullService::class.java)
+
+    fun getOwners(): OwnerService = retrofit.create(OwnerService::class.java)
 }
 
