@@ -21,6 +21,6 @@ interface PatientDao {
     @Update
     fun update(patient: Patient)
 
-//    @Query("Select * from Patient where cpf_patient = ':id'")
-//    fun fetch(id: String): Patient
+    @Query("Select * from Patient where cpf_patient = :id")
+    fun fetchById(id: String): Patient
 }

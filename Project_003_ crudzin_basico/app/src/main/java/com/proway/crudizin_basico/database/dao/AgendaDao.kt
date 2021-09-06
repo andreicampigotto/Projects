@@ -13,7 +13,7 @@ interface AgendaDao {
 
     @Transaction
     @Query("Select * from Agenda where id_agenda = :id")
-    fun fetch(id: Int): AgendaWhitFks
+    fun fetch(id: String): AgendaWhitFks
 
     @Transaction
     @Query("Select * from Agenda inner join Doctor on doctor.crm_doctor = doctor_fk where doctor.name_doctor like '%' || :name || '%'")
@@ -21,7 +21,7 @@ interface AgendaDao {
 
     @Transaction
     @Query("Select * from Agenda inner join Doctor on doctor.crm_doctor = doctor_fk where doctor.speciality_fk in (:ids)")
-    fun fetchByPhysicianSpeciality(ids: List<Int>): List<AgendaWhitFks>
+    fun fetchByPhysicianSpeciality(ids: List<String>): List<AgendaWhitFks>
 
     @Transaction
     @Query("Select * from Agenda inner join Patient on patient.cpf_patient = patient_fk where patient.name_patient like '%' || :name || '%'")

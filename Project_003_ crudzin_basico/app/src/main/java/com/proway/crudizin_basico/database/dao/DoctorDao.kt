@@ -23,8 +23,8 @@ interface DoctorDao {
     @Update
     fun update(speciality: Doctor)
 
-//    @Transaction
-//    @Query("Select * from Doctor where crm_doctor = :id")
-//    fun fetch(id: String): DoctorWithSpeciality
+    @Transaction
+    @Query("Select * from Doctor where crm_doctor = :id")
+    fun fetchById(id: String): DoctorWithSpeciality
 
 }
