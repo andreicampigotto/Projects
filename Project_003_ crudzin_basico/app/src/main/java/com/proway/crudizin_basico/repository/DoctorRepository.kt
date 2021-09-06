@@ -1,27 +1,26 @@
 package com.proway.crudizin_basico.repository
 
-import com.proway.crudizin_basico.database.AppDatabase
 import com.proway.crudizin_basico.database.dao.DoctorDao
 import com.proway.crudizin_basico.model.Doctor
 import com.proway.crudizin_basico.model.DoctorWithSpeciality
+import javax.inject.Inject
 
-class DoctorRepository {
-
-    private val dao: DoctorDao = AppDatabase.getDatabase().getDoctorDao()
-
+class DoctorRepository @Inject constructor(
+    private val doctorDao: DoctorDao,
+) {
     fun getDoctors(): List<DoctorWithSpeciality> {
-        return dao.fetch()
+        return doctorDao.fetch()
     }
 
 //    fun insert(doctor: Doctor) {
-//        return dao.insert(doctor)
+//        return doctorDao.insert(doctor)
 //    }
 
     fun delete(doctor: Doctor) {
-        return dao.delete(doctor)
+        return doctorDao.delete(doctor)
     }
 
     fun update(doctor: Doctor) {
-        return dao.update(doctor)
+        return doctorDao.update(doctor)
     }
 }

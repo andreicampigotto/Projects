@@ -1,15 +1,16 @@
 package com.proway.crudizin_basico.repository
 
-import com.proway.crudizin_basico.database.AppDatabase
 import com.proway.crudizin_basico.database.dao.AgendaDao
 import com.proway.crudizin_basico.model.Agenda
 import com.proway.crudizin_basico.model.AgendaWhitFks
-class AgendaRepository {
+import javax.inject.Inject
 
-    private val dao: AgendaDao = AppDatabase.getDatabase().getAgendaDao()
+class AgendaRepository @Inject constructor(
+    private val agendaDao: AgendaDao,
+) {
 
     fun getAgenda(): List<AgendaWhitFks> {
-        return dao.fetch()
+        return agendaDao.fetch()
     }
 
 //    fun insert(List<agenda>: Agenda) {
@@ -17,10 +18,10 @@ class AgendaRepository {
 //    }
 
     fun delete(agenda: Agenda) {
-        return dao.delete(agenda)
+        return agendaDao.delete(agenda)
     }
 
     fun update(agenda: Agenda) {
-        return dao.update(agenda)
+        return agendaDao.update(agenda)
     }
 }

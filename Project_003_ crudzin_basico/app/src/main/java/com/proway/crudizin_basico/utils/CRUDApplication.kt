@@ -8,7 +8,6 @@ class CRUDApplication: Application() {
         var contextCRUDApp : Context? = null
     }
 
-
     override fun onCreate() {
         super.onCreate()
 
