@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/patient"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_person_24"
+        android:title="Patient" />
+
+    <item
+        android:id="@+id/speciality"
+        android:enabled="true"
+        android:title="Especialidade" />
+
+    <item
+        android:id="@+id/doctor"
+        android:enabled="true"
+        android:icon="@drawable/ic_doctor"
+        android:title="Medico" />
+
+    <item
+        android:id="@+id/Agenda"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_view_agenda_24"
+        android:title="Agenda" />
+
+</menu>
