@@ -68,7 +68,7 @@ class DoctorFragment : Fragment(R.layout.fragment_doctor) {
                 viewModel.insertDoctor(
                     Doctor(
                         name_doctor = name,
-                        speciality_fk = selectedSpecialist!!.id_specialty
+                        speciality_fk = selectedSpecialist!!.id_speciality
                     )
                 )
                 clearFields()
@@ -89,7 +89,7 @@ class DoctorFragment : Fragment(R.layout.fragment_doctor) {
                 viewModel.updateDoctor(
                     Doctor(
                         name_doctor = name,
-                        speciality_fk = selectedSpecialist!!.id_specialty.toInt()
+                        speciality_fk = selectedSpecialist!!.id_speciality.toInt()
                     )
                 )
                 clearFields()

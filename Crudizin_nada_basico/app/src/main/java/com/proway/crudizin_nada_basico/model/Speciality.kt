@@ -5,9 +5,9 @@ import androidx.room.*
 @Entity
 data class Speciality(
     @PrimaryKey(autoGenerate = true)
-    @ColumnInfo(name = "id_specialty")
-    val id_specialty: Int = 0,
+    @ColumnInfo(name = "id_speciality")
+    val id_speciality: Int = 0,
 
-    @ColumnInfo(name = "name_specialty")
+    @ColumnInfo(name = "name_speciality")
     val name: String
 ) {}
