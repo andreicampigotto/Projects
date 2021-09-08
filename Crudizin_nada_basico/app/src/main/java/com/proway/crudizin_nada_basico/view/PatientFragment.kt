@@ -47,8 +47,10 @@ class PatientFragment : Fragment(R.layout.fragment_patient) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(PatientViewModel::class.java)
         binding = FragmentPatientBinding.bind(view)
+
         viewModel.patient.observe(viewLifecycleOwner, observerPatient)
         viewModel.getAllPatient()
+
         settingRecyclerView()
         settingForm()
     }

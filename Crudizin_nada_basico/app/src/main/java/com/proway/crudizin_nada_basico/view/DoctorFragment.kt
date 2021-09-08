@@ -63,7 +63,7 @@ class DoctorFragment : Fragment(R.layout.fragment_doctor) {
 
         binding.bottomNew.setOnClickListener {
             val name = binding.textInputLayoutDoctorName.editText?.text.toString()
-            if (name.isNotEmpty() && selectedSpecialist != null) {
+            if (!name.isNullOrEmpty()) {
                 viewModel.insertDoctor(
                     Doctor(
                         name_doctor = name,
@@ -83,7 +83,7 @@ class DoctorFragment : Fragment(R.layout.fragment_doctor) {
 
         binding.bottomEdit.setOnClickListener {
             val name = binding.textInputLayoutDoctorName.editText?.text
-            if (name.toString().isNotEmpty() && selectedSpecialist != null) {
+            if (name.toString().isNotEmpty()) {
                 viewModel.updateDoctor(
                     Doctor(
                         name_doctor = name.toString(),

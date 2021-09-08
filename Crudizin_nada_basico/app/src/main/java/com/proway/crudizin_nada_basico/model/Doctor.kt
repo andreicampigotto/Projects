@@ -11,7 +11,7 @@ data class Doctor(
     @ColumnInfo(name = "name_doctor")
     val name_doctor: String,
 
-    val speciality_fk: Long,
+    val speciality_fk: Int,
 )
 data class DoctorWithSpeciality(
     @Embedded
