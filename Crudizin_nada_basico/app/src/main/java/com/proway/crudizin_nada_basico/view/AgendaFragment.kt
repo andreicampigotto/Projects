@@ -8,7 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.proway.crudizin_nada_basico.R
 import com.proway.crudizin_nada_basico.view_model.AgendaViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class AgendaFragment : Fragment() {
 
     companion object {

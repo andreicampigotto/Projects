@@ -5,7 +5,9 @@ import android.os.Bundle
 import com.proway.crudizin_nada_basico.databinding.MainActivityBinding
 import com.proway.crudizin_nada_basico.utils.replaceFrag
 import com.proway.crudizin_nada_basico.view.*
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: MainActivityBinding
@@ -30,7 +32,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.doctor -> {
                     replaceFrag(DoctorFragment.newInstance())
                 }
-
                 R.id.agenda -> {
                     replaceFrag(AgendaFragment.newInstance())
                 }
