@@ -48,6 +48,7 @@ class DoctorFragment : Fragment(R.layout.fragment_doctor) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(DoctorViewModel::class.java)
         binding = FragmentDoctorBinding.bind(view)
+
         setupRecyclerView()
         startObservers()
         setupForm()
