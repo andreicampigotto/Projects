@@ -6,6 +6,7 @@ import javax.inject.Inject
 
 class SpecialityRepository
 @Inject constructor(
+
     private val specialityDao: SpecialityDao,
 ) {
     fun getSpecialities(): List<Speciality> {

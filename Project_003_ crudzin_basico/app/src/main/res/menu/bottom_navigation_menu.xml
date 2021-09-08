@@ -19,7 +19,7 @@
         android:title="Medico" />
 
     <item
-        android:id="@+id/Agenda"
+        android:id="@+id/agenda"
         android:enabled="true"
         android:icon="@drawable/ic_baseline_view_agenda_24"
         android:title="Agenda" />

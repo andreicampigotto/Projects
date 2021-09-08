@@ -18,9 +18,9 @@
         <entry key="app/src/main/res/layout/insert_patient.xml" value="0.35979513444302175" />
         <entry key="app/src/main/res/layout/insert_speciality.xml" value="0.4542312392416568" />
         <entry key="app/src/main/res/layout/item_agenda.xml" value="0.16770833333333332" />
-        <entry key="app/src/main/res/layout/item_doctor.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/item_doctor.xml" value="0.375" />
         <entry key="app/src/main/res/layout/item_especialidade.xml" value="0.16770833333333332" />
-        <entry key="app/src/main/res/layout/item_patient.xml" value="0.16770833333333332" />
+        <entry key="app/src/main/res/layout/item_patient.xml" value="0.335" />
         <entry key="app/src/main/res/layout/item_speciality.xml" value="0.335" />
         <entry key="app/src/main/res/layout/main_activity.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/main_fragment.xml" value="0.18177083333333333" />

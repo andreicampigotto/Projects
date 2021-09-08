@@ -14,53 +14,41 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+
+        android:layout_marginTop="17dp">
 
         <LinearLayout
             android:id="@+id/linearLayout"
+            android:padding="7dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="top"
-            android:layout_marginTop="17dp"
             android:maxLines="1"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textFieldDoctor">
 
-            <com.google.android.material.textfield.TextInputLayout
+            <TextView
                 android:id="@+id/textSpecialityId"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="4"
                 android:gravity="center"
-                android:hint="#0001">
+                android:hint="#0001"
+                android:enabled="false"
+                android:textStyle="italic|bold" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:textSize="17sp"
-                    android:textStyle="italic"
-                    android:background="@color/white"
-                    android:enabled="false"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
+            <TextView
                 android:id="@+id/textSpecialityName"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:hint="Especialista em micro cirurgias">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:textStyle="bold"
-                    android:textSize="17sp"/>
-            </com.google.android.material.textfield.TextInputLayout>
+                android:enabled="false"
+                android:hint="Nome do Medico"
+                android:textStyle="bold" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
