@@ -60,7 +60,6 @@ class DoctorFragment : Fragment(R.layout.fragment_doctor) {
     }
 
     private fun setupForm() {
-
         binding.bottomNew.setOnClickListener {
             val name = binding.textInputLayoutDoctorName.editText?.text.toString()
             if (!name.isNullOrEmpty()) {
@@ -101,7 +100,7 @@ class DoctorFragment : Fragment(R.layout.fragment_doctor) {
     }
 
 
-    fun setValueToFields(doctorWithSpecialist: DoctorWithSpeciality) {
+    private fun setValueToFields(doctorWithSpecialist: DoctorWithSpeciality) {
         binding.textInputLayoutDoctorName.editText?.setText(doctorWithSpecialist.doctor?.name_doctor)
         binding.bottomNew.visibility = View.GONE
 
@@ -109,7 +108,7 @@ class DoctorFragment : Fragment(R.layout.fragment_doctor) {
         selectedSpecialist = doctorWithSpecialist.speciality
     }
 
-    fun clearFields() {
+    private fun clearFields() {
         binding.textInputLayoutDoctorName.editText?.setText("")
         binding.bottomNew.visibility = View.VISIBLE
 
