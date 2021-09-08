@@ -4,6 +4,7 @@ import androidx.room.*
 
 @Entity
 data class Speciality(
+
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id_speciality")
     val id_speciality: Int = 0,

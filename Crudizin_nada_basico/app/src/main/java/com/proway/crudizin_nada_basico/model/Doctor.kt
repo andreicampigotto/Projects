@@ -4,6 +4,7 @@ import androidx.room.*
 
 @Entity
 data class Doctor(
+
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "doc_id")
     var doc_id: Int = 0,
@@ -14,12 +15,13 @@ data class Doctor(
     val speciality_fk: Int,
 )
 data class DoctorWithSpeciality(
+
     @Embedded
-    val doctor: Doctor,
+    val doctor: Doctor?,
 
     @Relation(
         parentColumn = "speciality_fk",
         entityColumn = "id_speciality"
     )
-    val speciality: Speciality,
+    val speciality: Speciality?,
 )

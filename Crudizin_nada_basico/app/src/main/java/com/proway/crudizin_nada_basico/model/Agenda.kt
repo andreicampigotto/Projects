@@ -13,8 +13,10 @@ data class Agenda(
 )
 
 data class AgendaWhitFks(
+
     @Embedded
     val agenda: Agenda,
+
     @Relation(
         parentColumn = "doctor_fk",
         entityColumn = "doc_id"
