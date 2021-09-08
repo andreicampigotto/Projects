@@ -44,7 +44,7 @@ class SpecialityViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
     private val binding = ItemSpecialityBinding.bind(itemView)
 
     fun bind(specialist: Speciality) {
-        binding.textSpecialityId.text = "# ${specialist.id_specialty.toString()} -"
+        binding.textSpecialityId.text = "# ${specialist.id_speciality.toString()} -"
         binding.textSpecialityName.text = "${specialist.name}"
     }
 }

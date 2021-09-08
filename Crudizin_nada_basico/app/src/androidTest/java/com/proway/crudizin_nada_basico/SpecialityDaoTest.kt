@@ -59,8 +59,8 @@ class SpecialityDaoTest {
 
     @Test
     fun testing_fetch_by_id() {
-        val spe1 = Speciality(id_specialty = 1,name = "S1")
-        val spe2 = Speciality(id_specialty = 2, name = "S2AA")
+        val spe1 = Speciality(id_speciality = 1,name = "S1")
+        val spe2 = Speciality(id_speciality = 2, name = "S2AA")
         val listToInsert = arrayListOf(spe1, spe2)
         dao.insert(listToInsert)
 
@@ -70,25 +70,25 @@ class SpecialityDaoTest {
 
     @Test
     fun testing_update() {
-        val spe1 = Speciality(id_specialty = 1,name = "S1")
-        val spe2 = Speciality(id_specialty = 2, name = "S2AA")
+        val spe1 = Speciality(id_speciality = 1,name = "S1")
+        val spe2 = Speciality(id_speciality = 2, name = "S2AA")
         val listToInsert = arrayListOf(spe1, spe2)
         dao.insert(listToInsert)
 
         val speForUpdate = Speciality(
-            id_specialty = spe2.id_specialty,
+            id_speciality = spe2.id_speciality,
             name = "SPE2Updated"
         )
         dao.update(speForUpdate)
 
-        val result = dao.fetch(spe2.id_specialty)
+        val result = dao.fetch(spe2.id_speciality)
         assertThat(result.name).isEqualTo(speForUpdate.name)
     }
 
     @Test
     fun testing_delete() {
-        val spe1 = Speciality(id_specialty = 1,name = "S1")
-        val spe2 = Speciality(id_specialty = 2, name = "S2AA")
+        val spe1 = Speciality(id_speciality = 1,name = "S1")
+        val spe2 = Speciality(id_speciality = 2, name = "S2AA")
         val listToInsert = arrayListOf(spe1, spe2)
         dao.insert(listToInsert)
 
