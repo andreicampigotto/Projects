@@ -38,8 +38,8 @@ class DoctorFragment : Fragment(R.layout.fragment_doctor) {
     }
 
     private val observerSpecialist = androidx.lifecycle.Observer<List<Speciality>> {
-        val listOf = it.map { category ->
-            category.name
+        val listOf = it.map { speciality ->
+            speciality.name
         }
         adapterSpinner.addAll(listOf)
     }
@@ -63,11 +63,12 @@ class DoctorFragment : Fragment(R.layout.fragment_doctor) {
         binding.bottomNew.setOnClickListener {
             val name = binding.textInputLayoutDoctorName.editText?.text.toString()
             val speciality = binding.textInputSpeciality.editText?.text.toString()
+
             if (!name.isNullOrEmpty() && !speciality.isNullOrEmpty()) {
                 viewModel.insertDoctor(
                     Doctor(
                         name_doctor = name,
-                        speciality_fk = selectedSpecialist!!.id_specialty.toInt()
+                        speciality_fk = selectedSpecialist!!.id_specialty
                     )
                 )
                 clearFields()
