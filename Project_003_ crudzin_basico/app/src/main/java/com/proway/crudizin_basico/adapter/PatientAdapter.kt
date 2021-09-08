@@ -14,9 +14,10 @@ class PatientAdapter(val itemClick: (Patient) -> Unit) :
     private var patients = mutableListOf<Patient>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PatientViewHolder {
-        LayoutInflater.from(parent.context).inflate(R.layout.item_patient, parent, false).apply {
-            return PatientViewHolder(this)
-        }
+        return LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_patient, parent, false).let {
+                PatientViewHolder(it)
+            }
     }
 
     override fun onBindViewHolder(holder: PatientViewHolder, position: Int) {

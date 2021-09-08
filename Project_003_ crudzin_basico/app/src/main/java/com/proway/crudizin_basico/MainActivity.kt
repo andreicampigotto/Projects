@@ -10,7 +10,7 @@ import com.proway.crudizin_basico.view.SpecialityFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity(R.layout.main_activity) {
+class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: MainActivityBinding
 

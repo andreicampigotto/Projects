@@ -35,8 +35,6 @@ object HiltModule {
         return DoctorRepository(provideDoctorDao(context))
     }
 
-
-
     //Dao
     @Provides
     fun provideSpecialityDao(@ApplicationContext context: Context): SpecialityDao {

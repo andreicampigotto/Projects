@@ -5,7 +5,7 @@ import androidx.room.*
 @Entity
 data class Doctor(
     @PrimaryKey
-    //@ColumnInfo(name = "crm_doctor")
+    @ColumnInfo(name = "crm_doctor")
     val crm_doctor: String,
 
     @ColumnInfo(name = "name_doctor")

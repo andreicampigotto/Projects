@@ -4,11 +4,8 @@ import com.proway.crudizin_basico.database.dao.SpecialityDao
 import com.proway.crudizin_basico.model.Speciality
 import javax.inject.Inject
 
-class SpecialityRepository
-@Inject constructor(
+class SpecialityRepository @Inject constructor(private val specialityDao: SpecialityDao) {
 
-    private val specialityDao: SpecialityDao,
-) {
     fun getSpecialities(): List<Speciality> {
         return specialityDao.fetch()
     }

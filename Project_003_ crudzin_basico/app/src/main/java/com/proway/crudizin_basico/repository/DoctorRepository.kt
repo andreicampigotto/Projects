@@ -5,15 +5,13 @@ import com.proway.crudizin_basico.model.Doctor
 import com.proway.crudizin_basico.model.DoctorWithSpeciality
 import javax.inject.Inject
 
-class DoctorRepository @Inject constructor(
-    private val doctorDao: DoctorDao,
-) {
+class DoctorRepository @Inject constructor(private val doctorDao: DoctorDao) {
 
     fun getDoctor(): List<DoctorWithSpeciality> {
         return doctorDao.fetch()
     }
 
-    fun insert(doctor: Doctor){
+    fun insert(doctor: Doctor) {
         return doctorDao.insert(doctor)
     }
 

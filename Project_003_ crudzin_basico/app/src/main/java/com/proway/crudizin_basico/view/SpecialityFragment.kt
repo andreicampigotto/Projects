@@ -1,9 +1,7 @@
 package com.proway.crudizin_basico.view
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -36,6 +34,7 @@ class SpecialityFragment : Fragment(R.layout.fragment_speciality) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         viewModel = ViewModelProvider(this).get(SpecialityViewModel::class.java)
         binding = FragmentSpecialityBinding.bind(view)
 
@@ -46,20 +45,9 @@ class SpecialityFragment : Fragment(R.layout.fragment_speciality) {
         viewModel.getAllSpecialisties()
 
         binding.floatButtonNewSpeciality.setOnClickListener {
-            InsertSpecialityFragment
+            InsertSpecialityFragment.newInstance()
         }
 
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        binding.floatButtonNewSpeciality.setOnClickListener {
-            inflater.inflate(R.layout.insert_speciality, container, false)
-        }
-        return binding.floatButtonNewSpeciality
     }
 
 }

@@ -14,9 +14,10 @@ class SpecialityAdapter(val itemClick: (Speciality) -> Unit) :
     private var specialities = mutableListOf<Speciality>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SpecialityViewHolder {
-        LayoutInflater.from(parent.context).inflate(R.layout.item_speciality, parent, false).apply {
-            return SpecialityViewHolder(this)
-        }
+        return LayoutInflater.from(parent.context)
+            .inflate(R.layout.item_speciality, parent, false).let {
+                SpecialityViewHolder(it)
+            }
     }
 
     override fun onBindViewHolder(holder: SpecialityViewHolder, position: Int) {
