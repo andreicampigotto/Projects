@@ -19,7 +19,7 @@ data class DoctorWithSpeciality(
 
     @Relation(
         parentColumn = "speciality_fk",
-        entityColumn = "id_specialty"
+        entityColumn = "id_speciality"
     )
     val speciality: Speciality,
 )
