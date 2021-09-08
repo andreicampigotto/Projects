@@ -20,7 +20,6 @@ class DoctorViewModel @Inject constructor(
     private val _speciality = MutableLiveData<List<Speciality>>()
     val specialist: LiveData<List<Speciality>> = _speciality
 
-
     private fun getAllDoctors() {
        // _doctor.value = doctorRepository.getDoctor()
     }

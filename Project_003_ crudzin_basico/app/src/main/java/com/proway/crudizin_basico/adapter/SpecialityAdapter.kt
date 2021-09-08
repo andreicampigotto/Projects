@@ -30,6 +30,13 @@ class SpecialityAdapter(val itemClick: (Speciality) -> Unit) :
     }
 
     override fun getItemCount(): Int = specialities.size
+
+    fun refresh(newList: List<Speciality>) {
+        specialities = mutableListOf()
+        specialities.addAll(newList)
+        notifyDataSetChanged()
+    }
+
 }
 class SpecialityViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
     private val binding = ItemSpecialityBinding.bind(itemView)
