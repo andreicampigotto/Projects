@@ -27,9 +27,12 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayoutPatientName"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="238dp"
-        android:layout_height="216dp"
-        android:hint="Nome do medico">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:hint="Nome do paciente"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutDoctorName">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
