@@ -62,11 +62,12 @@ class DoctorFragment : Fragment(R.layout.fragment_doctor) {
     private fun setupForm() {
         binding.bottomNew.setOnClickListener {
             val name = binding.textInputLayoutDoctorName.editText?.text.toString()
-            if (!name.isNullOrEmpty()) {
+            val speciality = binding.textInputSpeciality.editText?.text.toString()
+            if (!name.isNullOrEmpty() && !speciality.isNullOrEmpty()) {
                 viewModel.insertDoctor(
                     Doctor(
                         name_doctor = name,
-                        speciality_fk = selectedSpecialist!!.id_specialty
+                        speciality_fk = selectedSpecialist!!.id_specialty.toInt()
                     )
                 )
                 clearFields()
@@ -81,12 +82,13 @@ class DoctorFragment : Fragment(R.layout.fragment_doctor) {
         }
 
         binding.bottomEdit.setOnClickListener {
-            val name = binding.textInputLayoutDoctorName.editText?.text
-            if (name.toString().isNotEmpty()) {
+            val name = binding.textInputLayoutDoctorName.editText?.text.toString()
+            val speciality = binding.textInputSpeciality.editText?.text.toString()
+            if (!name.isNullOrEmpty() && !speciality.isNullOrEmpty()) {
                 viewModel.updateDoctor(
                     Doctor(
                         name_doctor = name.toString(),
-                        speciality_fk = selectedSpecialist!!.id_specialty
+                        speciality_fk = selectedSpecialist!!.id_specialty.toInt()
                     )
                 )
                 clearFields()
