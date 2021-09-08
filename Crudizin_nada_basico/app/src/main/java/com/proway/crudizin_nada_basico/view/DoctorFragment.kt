@@ -53,7 +53,6 @@ class DoctorFragment : Fragment(R.layout.fragment_doctor) {
         setupForm()
     }
 
-
     private fun startObservers() {
         viewModel.doctor.observe(viewLifecycleOwner, observerDoctor)
         viewModel.specialist.observe(viewLifecycleOwner, observerSpecialist)
