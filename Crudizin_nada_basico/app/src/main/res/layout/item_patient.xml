@@ -18,10 +18,25 @@
             android:padding="7dp">
 
             <TextView
+                android:id="@+id/textPatientAge"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_height="match_parent"
+                android:enabled="false"
+                android:textSize="18sp"
+                android:hint="100"
+                android:textAlignment="textStart"
+                android:textColor="@color/black"
+                android:textStyle="italic|bold"
+                app:layout_constraintStart_toEndOf="@+id/textPatientId"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
                 android:id="@+id/textPatientId"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:textAlignment="textStart"
+                android:textSize="18sp"
                 android:hint="000.000.000-00"
                 android:textStyle="italic|bold"
                 android:enabled="false"

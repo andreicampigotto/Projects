@@ -45,6 +45,7 @@ class PatientViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     fun bind(patient: Patient) {
         binding.textPatientId.text = "# ${patient.pat_id} -"
         binding.textPatientName.text = "${patient.name_patient}"
+        binding.textPatientAge.text = "${patient.age} anos "
     }
 }
 

@@ -114,9 +114,7 @@ class DoctorFragment : Fragment(R.layout.fragment_doctor) {
 
     private fun clearFields() {
         binding.textInputLayoutDoctorName.editText?.setText("")
+        binding.textInputSpeciality.editText?.setText("")
         binding.bottomNew.visibility = View.VISIBLE
-
-        selectedSpeciality = null
-        selectedDoctor = null
     }
 }
