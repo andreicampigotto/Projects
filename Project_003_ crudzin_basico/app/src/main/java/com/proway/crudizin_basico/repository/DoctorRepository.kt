@@ -8,13 +8,14 @@ import javax.inject.Inject
 class DoctorRepository @Inject constructor(
     private val doctorDao: DoctorDao,
 ) {
-    fun getDoctors(): List<DoctorWithSpeciality> {
+
+    fun getDoctor(): List<DoctorWithSpeciality> {
         return doctorDao.fetch()
     }
 
-//    fun insert(doctor: Doctor) {
-//        return doctorDao.insert(doctor)
-//    }
+    fun insert(doctor: Doctor){
+        return doctorDao.insert(doctor)
+    }
 
     fun delete(doctor: Doctor) {
         return doctorDao.delete(doctor)

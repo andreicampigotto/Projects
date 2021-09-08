@@ -15,13 +15,13 @@ interface DoctorDao {
     fun fetch(name: String): List<DoctorWithSpeciality>
 
     @Insert(onConflict = ABORT)
-    fun insert(list: List<Doctor>)
+    fun insert(doctor: Doctor)
 
     @Delete
-    fun delete(speciality: Doctor)
+    fun delete(doctor: Doctor)
 
     @Update
-    fun update(speciality: Doctor)
+    fun update(doctor: Doctor)
 
     @Transaction
     @Query("Select * from Doctor where crm_doctor = :id")

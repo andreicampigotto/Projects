@@ -8,4 +8,6 @@ class PatientFragment : Fragment(R.layout.fragment_patient) {
     companion object {
         fun newInstance() = PatientFragment()
     }
+
+
 }
