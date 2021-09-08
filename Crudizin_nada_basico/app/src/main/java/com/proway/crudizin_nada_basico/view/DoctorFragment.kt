@@ -26,7 +26,7 @@ class DoctorFragment : Fragment(R.layout.fragment_doctor) {
     private lateinit var binding: FragmentDoctorBinding
     private lateinit var adapterSpinner: ArrayAdapter<String>
 
-    private var selectedSpecialist: Speciality? = null
+    private var selectedSpeciality: Speciality? = null
     private var selectedDoctor: DoctorWithSpeciality? = null
 
     private val adapter: DoctorAdapter = DoctorAdapter {
@@ -67,7 +67,7 @@ class DoctorFragment : Fragment(R.layout.fragment_doctor) {
                 viewModel.insertDoctor(
                     Doctor(
                         name_doctor = name,
-                        speciality_fk = selectedSpecialist!!.id_speciality
+                        speciality_fk = selectedSpeciality!!.id_speciality
                     )
                 )
                 clearFields()
@@ -84,11 +84,12 @@ class DoctorFragment : Fragment(R.layout.fragment_doctor) {
         binding.bottomEdit.setOnClickListener {
             val name = binding.textInputLayoutDoctorName.editText?.text.toString()
             val speciality = binding.textInputSpeciality.editText?.text.toString()
+
             if (!name.isNullOrEmpty() && !speciality.isNullOrEmpty()) {
                 viewModel.updateDoctor(
                     Doctor(
                         name_doctor = name,
-                        speciality_fk = selectedSpecialist!!.id_speciality.toInt()
+                        speciality_fk = selectedSpeciality!!.id_speciality.toInt()
                     )
                 )
                 clearFields()
@@ -107,14 +108,14 @@ class DoctorFragment : Fragment(R.layout.fragment_doctor) {
         binding.bottomNew.visibility = View.GONE
 
         selectedDoctor = doctorWithSpecialist
-        selectedSpecialist = doctorWithSpecialist.speciality
+        selectedSpeciality = doctorWithSpecialist.speciality
     }
 
     private fun clearFields() {
         binding.textInputLayoutDoctorName.editText?.setText("")
         binding.bottomNew.visibility = View.VISIBLE
 
-        selectedSpecialist = null
+        selectedSpeciality = null
         selectedDoctor = null
     }
 }
