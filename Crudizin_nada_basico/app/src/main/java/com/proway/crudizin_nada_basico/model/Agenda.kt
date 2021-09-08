@@ -5,11 +5,11 @@ import androidx.room.*
 data class Agenda(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id_agenda")
-    val id_agenda: Long,
+    val id_agenda: Int,
 
-    val doctor_fk: String,
+    val doctor_fk: Int,
 
-    val patient_fk: String
+    val patient_fk: Int
 )
 
 data class AgendaWhitFks(
