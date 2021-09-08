@@ -67,7 +67,7 @@ class PatientDaoTest {
         dao.insert(listToInsert)
 
         val result = dao.fetch("2")
-        //assertThat(result.name_patient).isEqualTo(newPatient2.name_patient)
+        assertThat(result.name_patient).isEqualTo(newPatient2.name_patient)
     }
 
     @Test
@@ -87,9 +87,9 @@ class PatientDaoTest {
         dao.update(patientForUpdate)
 
         val result = dao.fetch(newPatient2.cpf_patient)
-//        assertThat(result.name_patient).isEqualTo(patientForUpdate.name_patient)
-//        assertThat(result.age).isEqualTo(patientForUpdate.age)
-//        assertThat(result.gender).isEqualTo(patientForUpdate.gender)
+        assertThat(result.name_patient).isEqualTo(patientForUpdate.name_patient)
+        assertThat(result.age).isEqualTo(patientForUpdate.age)
+        assertThat(result.gender).isEqualTo(patientForUpdate.gender)
     }
 
     @Test

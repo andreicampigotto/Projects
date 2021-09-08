@@ -5,8 +5,10 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.proway.crudizin_basico.model.Speciality
 import com.proway.crudizin_basico.repository.SpecialityRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
+@HiltViewModel
 class SpecialityViewModel @Inject constructor(private val specialityRepository: SpecialityRepository) :
     ViewModel() {
 

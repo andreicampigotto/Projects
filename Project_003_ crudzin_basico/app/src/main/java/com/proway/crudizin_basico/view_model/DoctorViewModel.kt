@@ -8,8 +8,10 @@ import com.proway.crudizin_basico.model.DoctorWithSpeciality
 import com.proway.crudizin_basico.model.Speciality
 import com.proway.crudizin_basico.repository.DoctorRepository
 import com.proway.crudizin_basico.repository.SpecialityRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
+@HiltViewModel
 class DoctorViewModel @Inject constructor(
     private val doctorRepository: DoctorRepository,
     private val specialityRepository: SpecialityRepository

@@ -6,7 +6,7 @@ import androidx.room.*
 data class Speciality(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id_specialty")
-    val id_specialty: Long = 0,
+    val id_specialty: Int = 0,
 
     @ColumnInfo(name = "name_specialty")
     val name: String
