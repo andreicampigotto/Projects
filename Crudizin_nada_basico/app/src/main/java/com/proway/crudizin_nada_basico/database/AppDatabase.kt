@@ -35,7 +35,7 @@ abstract class AppDatabase : RoomDatabase() {
             return Room.databaseBuilder(
                 context,
                 AppDatabase::class.java,
-                "crudizin_basico_app_db"
+                "crudizin_nada_basico"
             )
                 .fallbackToDestructiveMigration()
                 .allowMainThreadQueries()
