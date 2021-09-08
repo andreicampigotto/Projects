@@ -5,7 +5,11 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.proway.crudizin_basico.databinding.MainActivityBinding
 import com.proway.crudizin_basico.model.Patient
+import com.proway.crudizin_basico.utils.replaceFrag
+import com.proway.crudizin_basico.view.DoctorFragment
 import com.proway.crudizin_basico.view.MainFragment
+import com.proway.crudizin_basico.view.PatientFragment
+import com.proway.crudizin_basico.view.SpecialityFragment
 
 class MainActivity : AppCompatActivity(R.layout.main_activity) {
 
@@ -21,29 +25,25 @@ class MainActivity : AppCompatActivity(R.layout.main_activity) {
 
     private fun bottomBar() {
         binding.bottomNavigation.setOnItemSelectedListener {
-            when (it.itemId) {
 
+            when (it.itemId) {
                 R.id.patient -> {
-                    //replaceFrag(Patient.newInstance())
+                    replaceFrag(PatientFragment.newInstance())
                 }
                 R.id.speciality -> {
-                    //replaceFragment(.newInstance())
+                    replaceFrag(SpecialityFragment.newInstance())
                 }
                 R.id.doctor -> {
-                    //replaceFragment(.newInstance())
+                    replaceFrag(DoctorFragment.newInstance())
                 }
 
                 R.id.agenda -> {
-                    //replaceFragment(.newInstance())
+                    //replaceFrag(.newInstance())
                 }
             }
             true
         }
     }
 
-    private fun replaceFrag(fragment: Fragment) {
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.container, fragment)
-            .commitNow()
-    }
+
 }
