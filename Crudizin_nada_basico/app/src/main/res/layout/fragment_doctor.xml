@@ -19,7 +19,6 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editNameSpecialist"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -29,9 +28,10 @@
         android:id="@+id/spinnerSelectSpeciality"
         android:layout_width="0dp"
         android:layout_height="45dp"
-        android:layout_marginStart="7dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="7dp"
-        app:layout_constraintEnd_toEndOf="@+id/textInputLayoutDoctorName"
+        android:layout_marginStart="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutDoctorName"
         tools:ignore="MissingConstraints" />
@@ -41,6 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="top"
+        android:layout_marginTop="5dp"
         android:layout_marginStart="7dp"
         android:layout_marginEnd="7dp"
         android:maxLines="1"

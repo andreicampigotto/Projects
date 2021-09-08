@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.agenda -> {
-                    //replaceFrag(.newInstance())
+                    replaceFrag(AgendaFragment.newInstance())
                 }
             }
             true
