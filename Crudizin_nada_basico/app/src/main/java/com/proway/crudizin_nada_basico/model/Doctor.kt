@@ -6,7 +6,7 @@ import androidx.room.*
 data class Doctor(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "doc_id")
-    var id: Int = 0,
+    var doc_id: Int = 0,
 
     @ColumnInfo(name = "name_doctor")
     val name_doctor: String,

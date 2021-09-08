@@ -17,13 +17,13 @@ data class AgendaWhitFks(
     val agenda: Agenda,
     @Relation(
         parentColumn = "doctor_fk",
-        entityColumn = "crm_doctor"
+        entityColumn = "doc_id"
     )
     val doctor: Doctor,
 
     @Relation(
         parentColumn = "patient_fk",
-        entityColumn = "cpf_patient"
+        entityColumn = "pat_id"
     )
     val patient: Patient
 )

@@ -7,7 +7,7 @@ data class Patient(
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "pat_id")
-    var id: Int = 0,
+    var pat_id: Int = 0,
 
     @ColumnInfo(name = "name_patient")
     val name_patient: String,
