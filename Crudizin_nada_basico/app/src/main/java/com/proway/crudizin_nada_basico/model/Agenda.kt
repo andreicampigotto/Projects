@@ -1,5 +1,4 @@
-package com.proway.crudizin_basico.model
-
+package com.proway.crudizin_nada_basico.model
 
 import androidx.room.*
 @Entity

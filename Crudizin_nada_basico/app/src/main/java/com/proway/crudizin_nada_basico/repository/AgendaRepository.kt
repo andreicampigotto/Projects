@@ -1,8 +1,8 @@
-package com.proway.crudizin_basico.repository
+package com.proway.crudizin_nada_basico.repository
 
-import com.proway.crudizin_basico.database.dao.AgendaDao
-import com.proway.crudizin_basico.model.Agenda
-import com.proway.crudizin_basico.model.AgendaWhitFks
+import com.proway.crudizin_nada_basico.database.dao.AgendaDao
+import com.proway.crudizin_nada_basico.model.Agenda
+import com.proway.crudizin_nada_basico.model.AgendaWhitFks
 import javax.inject.Inject
 
 class AgendaRepository @Inject constructor(
