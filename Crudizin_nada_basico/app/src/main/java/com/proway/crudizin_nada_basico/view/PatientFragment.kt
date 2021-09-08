@@ -51,8 +51,6 @@ class PatientFragment : Fragment(R.layout.fragment_patient) {
         viewModel.getAllPatient()
         settingRecyclerView()
         settingForm()
-
-
     }
 
     private fun settingForm() {
@@ -93,7 +91,7 @@ class PatientFragment : Fragment(R.layout.fragment_patient) {
                     ) {
                         viewModel.updatePatient(
                             Patient(
-                                id = selectedPatient!!.id,
+                                pat_id = selectedPatient!!.pat_id,
                                 name_patient = name.text.toString(),
                                 age = age?.text.toString().toInt(),
                                 gender = gender?.text.toString()

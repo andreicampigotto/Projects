@@ -43,7 +43,7 @@ class PatientViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val binding = ItemPatientBinding.bind(itemView)
 
     fun bind(patient: Patient) {
-        binding.textPatientId.text = "# ${patient.id} -"
+        binding.textPatientId.text = "# ${patient.pat_id} -"
         binding.textPatientName.text = "${patient.name_patient}"
     }
 }

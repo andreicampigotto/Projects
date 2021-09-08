@@ -9,7 +9,7 @@ import com.proway.crudizin_nada_basico.model.AgendaWhitFks
 @Dao
 interface AgendaDao {
     @Transaction
-    @Query("Select * from Agenda a, Doctor d where a.doctor_fk = d.crm_doctor order by d.name_doctor")
+    @Query("Select * from Agenda a, Doctor d where a.doctor_fk = d.doc_id order by d.name_doctor")
     fun fetch(): List<AgendaWhitFks>
 
     @Transaction
@@ -17,19 +17,19 @@ interface AgendaDao {
     fun fetchById(id: String): AgendaWhitFks
 
     @Transaction
-    @Query("Select * from Agenda inner join Doctor on doctor.crm_doctor = doctor_fk where doctor.name_doctor like '%' || :name || '%'")
+    @Query("Select * from Agenda inner join Doctor on doctor.doc_id = doctor_fk where doctor.name_doctor like '%' || :name || '%'")
     fun fetchByDoctor(name: String): List<AgendaWhitFks>
 
     @Transaction
-    @Query("Select * from Agenda inner join Doctor on doctor.crm_doctor = doctor_fk where doctor.speciality_fk in (:ids)")
+    @Query("Select * from Agenda inner join Doctor on doctor.doc_id = doctor_fk where doctor.speciality_fk in (:ids)")
     fun fetchByDoctorSpeciality(ids: List<String>): List<AgendaWhitFks>
 
     @Transaction
-    @Query("Select * from Agenda inner join Patient on patient.cpf_patient = patient_fk where patient.name_patient like '%' || :name || '%'")
+    @Query("Select * from Agenda inner join Patient on patient.pat_id = patient_fk where patient.name_patient like '%' || :name || '%'")
     fun fetchByPatient(name: String): List<AgendaWhitFks>
 
     @Transaction
-    @Query("Select * from Agenda inner join Patient on patient.cpf_patient = patient_fk where gender = :gender")
+    @Query("Select * from Agenda inner join Patient on patient.pat_id = patient_fk where gender = :gender")
     fun fetchByGender(gender: String): List<AgendaWhitFks>
 
     @Insert(onConflict = ABORT)
