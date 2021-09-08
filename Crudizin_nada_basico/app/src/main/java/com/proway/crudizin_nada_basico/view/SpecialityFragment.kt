@@ -75,7 +75,7 @@ class SpecialistFragment : Fragment(R.layout.fragment_speciality) {
                     viewModel.updateSpeciality(
                         Speciality(
                             name = name.text.toString(),
-                            id_specialty = selectedSpecialist!!.id_specialty
+                            id_speciality = selectedSpecialist!!.id_speciality
                         )
                     )
                     clearFields()
