@@ -87,7 +87,7 @@ class DoctorFragment : Fragment(R.layout.fragment_doctor) {
             if (!name.isNullOrEmpty() && !speciality.isNullOrEmpty()) {
                 viewModel.updateDoctor(
                     Doctor(
-                        name_doctor = name.toString(),
+                        name_doctor = name,
                         speciality_fk = selectedSpecialist!!.id_specialty.toInt()
                     )
                 )
