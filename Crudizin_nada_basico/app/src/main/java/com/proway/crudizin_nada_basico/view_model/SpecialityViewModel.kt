@@ -5,8 +5,10 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.proway.crudizin_nada_basico.model.Speciality
 import com.proway.crudizin_nada_basico.repository.SpecialityRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
+@HiltViewModel
 class SpecialityViewModel @Inject constructor(private val specialityRepository: SpecialityRepository) :
     ViewModel() {
 
@@ -19,6 +21,7 @@ class SpecialityViewModel @Inject constructor(private val specialityRepository: 
 
     fun insertSpeciality(speciality: Speciality) {
         specialityRepository.insert(speciality)
+        //usa funcao para atualizar a lista
         getAllSpecialisties()
     }
 

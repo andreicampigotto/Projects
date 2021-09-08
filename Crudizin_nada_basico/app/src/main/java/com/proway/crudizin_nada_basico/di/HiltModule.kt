@@ -20,23 +20,19 @@ import dagger.hilt.components.SingletonComponent
 @InstallIn(SingletonComponent::class)
 object HiltModule {
 
-    //Repository
     @Provides
-    fun provideSpecialityRepository(@ApplicationContext context: Context): SpecialityRepository {
-        return SpecialityRepository(provideSpecialityDao(context))
-    }
+    fun provideSpecialityRepository(@ApplicationContext context: Context): SpecialityRepository = SpecialityRepository(provideSpecialityDao(context))
+
 
     @Provides
-    fun providePatientRepository(@ApplicationContext context: Context): PatientRepository {
-        return PatientRepository(providePatientDao(context))
-    }
+    fun providePatientRepository(@ApplicationContext context: Context): PatientRepository = PatientRepository(providePatientDao(context))
+
 
     @Provides
     fun provideDoctorRepository(@ApplicationContext context: Context): DoctorRepository {
         return DoctorRepository(provideDoctorDao(context))
     }
 
-    //Dao
     @Provides
     fun provideSpecialityDao(@ApplicationContext context: Context): SpecialityDao {
         return AppDatabase.getDatabase(context).getSpecialityDao()

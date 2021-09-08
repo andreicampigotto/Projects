@@ -25,6 +25,7 @@
                 android:hint="000.000.000-00"
                 android:textStyle="italic|bold"
                 android:enabled="false"
+                android:textColor="@color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,6 +36,7 @@
                 android:layout_height="wrap_content"
                 android:textAlignment="textStart"
                 android:layout_marginTop="7dp"
+                android:textColor="@color/black"
                 android:hint="Nome do Paciente"
                 android:textStyle="bold"
                 android:enabled="false"

@@ -11,6 +11,7 @@
     <item
         android:id="@+id/speciality"
         android:enabled="true"
+        android:icon="@drawable/ic_baseline_baby"
         android:title="Especialidade" />
 
     <item
