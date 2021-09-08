@@ -15,7 +15,7 @@ class PatientViewModel @Inject constructor(
     private val _patient = MutableLiveData<List<Patient>>()
     val patient: LiveData<List<Patient>> = _patient
 
-    private fun getAllPatient() {
+    fun getAllPatient() {
         _patient.value = patientRepository.getPatients()
     }
 

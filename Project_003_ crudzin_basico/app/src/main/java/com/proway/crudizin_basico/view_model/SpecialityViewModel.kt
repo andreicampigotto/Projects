@@ -17,17 +17,17 @@ class SpecialityViewModel @Inject constructor(private val specialityRepository: 
         _speciality.value = specialityRepository.getSpecialities()
     }
 
-    fun insertSpecialist(speciality: Speciality) {
+    fun insertSpeciality(speciality: Speciality) {
         specialityRepository.insert(speciality)
         getAllSpecialisties()
     }
 
-    fun updateSpecialist(speciality: Speciality) {
+    fun updateSpeciality(speciality: Speciality) {
         specialityRepository.update(speciality)
         getAllSpecialisties()
     }
 
-    fun deleteSpecialist(speciality: Speciality) {
+    fun deleteSpeciality(speciality: Speciality) {
         specialityRepository.delete(speciality)
         getAllSpecialisties()
     }

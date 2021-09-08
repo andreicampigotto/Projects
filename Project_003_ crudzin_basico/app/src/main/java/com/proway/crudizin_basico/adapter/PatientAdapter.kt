@@ -30,6 +30,12 @@ class PatientAdapter(val itemClick: (Patient) -> Unit) :
     }
 
     override fun getItemCount(): Int = patients.size
+
+    fun update(newList: List<Patient>) {
+        patients = mutableListOf()
+        patients.addAll(newList)
+        notifyDataSetChanged()
+    }
 }
 
 class PatientViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {

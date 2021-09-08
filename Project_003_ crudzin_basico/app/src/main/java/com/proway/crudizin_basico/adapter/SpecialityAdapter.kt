@@ -22,7 +22,6 @@ class SpecialityAdapter(val itemClick: (Speciality) -> Unit) :
     override fun onBindViewHolder(holder: SpecialityViewHolder, position: Int) {
         specialities[position].apply {
             holder.bind(this)
-
             holder.itemView.setOnClickListener {
                 itemClick(this)
             }
@@ -31,7 +30,7 @@ class SpecialityAdapter(val itemClick: (Speciality) -> Unit) :
 
     override fun getItemCount(): Int = specialities.size
 
-    fun refresh(newList: List<Speciality>) {
+    fun update(newList: List<Speciality>) {
         specialities = mutableListOf()
         specialities.addAll(newList)
         notifyDataSetChanged()
