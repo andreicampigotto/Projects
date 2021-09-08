@@ -23,10 +23,8 @@ object HiltModule {
     @Provides
     fun provideSpecialityRepository(@ApplicationContext context: Context): SpecialityRepository = SpecialityRepository(provideSpecialityDao(context))
 
-
     @Provides
     fun providePatientRepository(@ApplicationContext context: Context): PatientRepository = PatientRepository(providePatientDao(context))
-
 
     @Provides
     fun provideDoctorRepository(@ApplicationContext context: Context): DoctorRepository {

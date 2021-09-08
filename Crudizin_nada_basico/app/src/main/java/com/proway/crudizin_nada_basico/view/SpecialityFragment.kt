@@ -52,7 +52,7 @@ class SpecialistFragment : Fragment(R.layout.fragment_speciality) {
     private fun settingForm() {
         binding.bottomNew.setOnClickListener {
             val name = binding.editNameSpecialist.text.toString()
-            if (name.isNotEmpty()) {
+            if (!name.isNullOrEmpty()) {
                 viewModel.insertSpeciality(
                     Speciality(
                         name = name
@@ -71,7 +71,7 @@ class SpecialistFragment : Fragment(R.layout.fragment_speciality) {
         binding.bottomEdit.setOnClickListener {
             selectedSpecialist?.let {
                 val name = binding.editNameSpecialist
-                if (name.editableText.isNotEmpty()) {
+                if (!name.editableText.isNullOrEmpty()) {
                     viewModel.updateSpeciality(
                         Speciality(
                             name = name.text.toString(),
