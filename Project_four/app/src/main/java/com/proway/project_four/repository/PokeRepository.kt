@@ -46,5 +46,4 @@ class PokeRepository @Inject constructor(
             true
         }
     }
-
 }

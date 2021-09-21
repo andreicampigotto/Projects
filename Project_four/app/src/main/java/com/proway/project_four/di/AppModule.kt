@@ -1,9 +1,13 @@
 package com.proway.project_four.di
 
+import android.content.Context
+import com.proway.project_four.database.AppDatabase
+import com.proway.project_four.database.dao.PokeDAO
 import com.proway.project_four.service.PokeService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -28,7 +32,10 @@ object AppModule {
     fun providePokeApi(retrofit: Retrofit): PokeService =
         retrofit.create(PokeService::class.java)
 
-    //@Provides
-
+    // injecao de dependencia do db
+    @Provides
+    fun providePokeDao(@ApplicationContext context: Context):PokeDAO{
+        return AppDatabase.getDatabase(context).getPokeDAO()
+    }
 
 }
